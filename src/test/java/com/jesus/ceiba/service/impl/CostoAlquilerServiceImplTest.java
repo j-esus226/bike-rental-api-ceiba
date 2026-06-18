@@ -75,6 +75,36 @@ class CostoAlquilerServiceImplTest {
         );
     }
 
+    @Test
+    void debeCobrarUnaHoraCompletaCuandoSeUsanMenosDe60Minutos() {
+
+        BigDecimal resultado =
+                service.calcularCostoBase(
+                        TipoBicicleta.URBANA,
+                        30
+                );
+
+        assertEquals(
+                BigDecimal.valueOf(3500),
+                resultado
+        );
+    }
+
+    @Test
+    void debeCalcularCostoBaseParaBicicletaElectrica() {
+
+        BigDecimal resultado =
+                service.calcularCostoBase(
+                        TipoBicicleta.ELECTRICA,
+                        60
+                );
+
+        assertEquals(
+                BigDecimal.valueOf(7500),
+                resultado
+        );
+    }
+
 }
 
 
