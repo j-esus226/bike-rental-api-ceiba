@@ -1,0 +1,1 @@
+REST API desarrollada con Spring Boot para la gestión de alquiler de bicicletas, aplicando arquitectura por capas, reglas de negocio y persistencia con MySQL.
